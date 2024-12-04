@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue';
+import { RouterLink } from 'vue-router';
 
 const api_key = 'a60c8092d60c3a84b51bcf5ac7f13ae9'
 const base_url = `https://api.themoviedb.org/3/movie/now_playing?api_key=${api_key}`
@@ -25,6 +26,6 @@ getNowPlayingMovies()
 <template>
     <h3 class="display-6 text-warning">List of now Playing Movies</h3>
     <template v-for="m in nowplaying" :key="m.id">
-        <a href="">{{ m.title }}</a> <br>
+        <RouterLink :to="`/movie/${m.id}`"> {{ m.title }} </RouterLink> <br>
     </template>
 </template>

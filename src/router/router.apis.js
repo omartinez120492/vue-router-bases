@@ -17,6 +17,11 @@ const routes = createRouter({
             component: () => import('../movies/MoviesApi.vue')
         },
         {
+            path: '/movie/:id',
+            name: 'movie-details',
+            component: () => import('../movies/components/MovieDetails.vue')
+        },
+        {
             path: '/phone',
             name: 'phone',
             component: () => import('../phone/PhoneApi.vue')
@@ -30,7 +35,7 @@ const routes = createRouter({
             path: '/tv',
             name: 'tv',
             component: () => import('../tv/TvApi.vue')
-        }
+        },
     ]
 })
 
