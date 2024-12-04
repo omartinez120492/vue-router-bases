@@ -4,6 +4,7 @@ import { RouterView, RouterLink } from 'vue-router';
 
 <template>
   <ul class="menu">
+    <RouterLink to="/" class="link">Home</RouterLink>
     <RouterLink to="/phone" class="link">Phone</RouterLink>
     <RouterLink to="/movie" class="link">Movie</RouterLink>
     <RouterLink to="/post" class="link">Post</RouterLink>
